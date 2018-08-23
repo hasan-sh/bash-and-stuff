@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Copy file/files to another folder
+
+fileDir="$(pwd)/$1"
+fileDesDir=$2
+echo $#
+if [ $# -le 1 ]
+then 
+   echo nooooooo
+   echo "No file provided!"
+   exit 1
+fi
+
+# Copy the input file
+rsync -avr $fileDir $fileDesDir
+
+exit 0
