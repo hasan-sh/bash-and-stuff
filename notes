@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Managing my notes!
+
+formattedDate=$(date +%Y-%m-%d--%H:%M)
+today=$(date +%d-%m)
+noteSrc=/home/hasan_sh/myNotes.json
+json=$(cat $noteSrc)
+
+print() {
+	echo Printing...
+	cat $noteSrc | jq .
+	echo Finished printing!
+	exit 0
+}
+
+if [ $# -le 1 ]
+then
+	if [ $1 == "print" ]
+	then
+		print
+	fi
+	echo Please enter the required parameters!
+	exit 1
+fi
+cause=$1
+subject=$2
+
+node /home/hasan_sh/Documents/development/nodejs/myNotesApp/index.js $cause $subject
+echo Done!
+
+exit 0
