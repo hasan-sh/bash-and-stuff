@@ -16,6 +16,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -23,6 +24,8 @@ filetype plugin indent on    " required
 " Customs!
 set number
 set hls
+setlocal tabstop=4
+setlocal shiftwidth=4
 
 inoremap jk <esc>
 inoremap kj <esc>
