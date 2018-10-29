@@ -1,3 +1,4 @@
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -8,6 +9,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'valloric/youcompleteme'
+
+" Surround
+Plugin 'tpope/vim-surround'
+
+" Commentary
+Plugin 'tpope/vim-commentary'
 
 " Jsx syntax for reactjs
 Plugin 'pangloss/vim-javascript'
@@ -44,5 +51,6 @@ nnoremap H :tabprev<CR>
 nnoremap L :tabnext<CR>
 nnoremap tn :tabedit<Space>
 nnoremap td :tabclose<CR>
+
 
 

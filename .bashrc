@@ -131,5 +131,5 @@ alias gitdone="git add . && git commit -a -m '$i' && git push -u origin master"
 # Env variable for react native
 
 
-export NVM_DIR="/home/hasan_sh/.nvm"
+export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

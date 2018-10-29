@@ -4,7 +4,7 @@
 
 formattedDate=$(date +%Y-%m-%d--%H:%M)
 today=$(date +%d-%m)
-noteSrc=/home/hasan_sh/myNotes.json
+noteSrc=/home/$USER/myNotes.json
 json=$(cat $noteSrc)
 
 print() {
@@ -26,7 +26,7 @@ fi
 cause=$1
 subject=$2
 
-node /home/hasan_sh/Documents/development/nodejs/myNotesApp/index.js $cause $subject
+node /home/$USER/Documents/development/nodejs/myNotesApp/index.js $cause $subject
 echo Done!
 
 exit 0
