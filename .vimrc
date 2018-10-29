@@ -14,6 +14,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " Emmet
 Plugin 'mattn/emmet-vim'
+" Prettier
+Plugin 'prettier/vim-prettier'
 
 
 
@@ -24,10 +26,23 @@ filetype plugin indent on    " required
 " Customs!
 set number
 set hls
-setlocal tabstop=4
-setlocal shiftwidth=4
+set tabstop=4
+set shiftwidth=4
+set relativenumber
 
+" Prettier customs configurations!
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.css,*.scss,*.less PrettierAsync
+let g:prettier#config#tab_width = 4
+let g:prettier#config#semi = 'false'
+
+" Key mapping
 inoremap jk <esc>
 inoremap kj <esc>
+
+nnoremap H :tabprev<CR>
+nnoremap L :tabnext<CR>
+nnoremap tn :tabedit<Space>
+nnoremap td :tabclose<CR>
 
 
